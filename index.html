@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eagle Attack v.0.1 by Deniz Engin Vehbi</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=9">
+        <meta name="description" content="Eagle Attack: an arcade game where an eagle attacks a Phantom quadcopter">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="css/style.css" type="text/css" rel="stylesheet" />
+        <script src="js/lib/phaser.min.js"></script>
+
+        <script src="js/utilities/Namespace.js"></script>
+        <script src="js/utilities/TranslationManager.js"></script>
+
+        <script src="js/Video.js"></script>
+        <script src="js/Intro.js"></script>
+        <script src="js/Game.js"></script>
+        <script src="/js/EagleAttack.js"></script>
+        <script>
+            window.onload = function() {
+                new DEV.EagleAttack().init();
+            };
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browsehappy">This game supports IE9 and above. Please <a href="http://browsehappy.com/">upgrade your browser or try a different browser.</a></p>
+        <![endif]-->
+
+        <div id="intro" class="overlay" style="display:none;"><div class="overlayContent"><h1>Eagle Attack</h1><div data-translate="introText"></div><input id="btnStart" class="button" type="button"value="Start"/></div></div>
+        <div id="eagleAttack" style="display:none;"></div>
+        <iframe id="eagleVideo" style="display:none;" src="//www.youtube.com/embed/f4tONE9x5tE?enablejsapi=1&version=3" frameborder="0" allowfullscreen></iframe>
+        <video id="gameoverVideo" style="display:none;" src="assets/video/eagleattack.mp4" ></video>
+     </body>
+</html>
